@@ -1,2 +1,1 @@
-Homework No.1 
-Created by Digna and Zane
+Homework No.1, created by Digna and Zane

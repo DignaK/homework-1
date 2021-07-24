@@ -5,30 +5,26 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* SAP part */
+/* SAP: menu */
 .menu-container{
     color: rgb(255, 255, 255);
     background-color: rgb(24, 24, 24);
     padding: 10px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 1.2em;
-}
-
-.logo{
-    width: 800px;
-    display: flex;
-    justify-content: space-around left;
 }
 
 .links{
     display: flex;
     justify-content: flex-end;
-    margin-top: 30px;
+    align-items: center;
 }
 
-.finances{
-    margin: 0 50px 0 50px;
+.history,
+.finances,
+.sap{
+    padding: 10px;
 }
 
 a:link{
@@ -44,33 +40,28 @@ a:hover{
     color: #019ce0;
 }
 
-/*  */
-.header-container-general,
-.header-container-company-overview,
-.header-container-sap-labs{
+/* SAP: content */
+.header-container{
     color: rgb(54, 52, 52);
-    background-color: #019ce0;
-    box-sizing: border-box;
+    background-color: #bee3f3;
     border: 1px solid grey;
     border-radius: 10px;
-    margin: 10px 70px 10px 70px;
+    margin: 10px 20px;
     padding: 20px;
     }
-             .header-container-company-overview{
-                background-color: #98d3ec;}
-            .header-container-sap-labs{
-                background-color: #bee3f3;}
+.general-info{
+     background-color: #019ce0;
+    }
+.company-overview{
+    background-color: #98d3ec;
+}
 
-
-.header-container-general h1,
-.header-container-company-overview h1,
-.header-container-sap-labs h1{
+.header-container h1{
     color: rgb(24, 24, 24);
     display: flex;
     justify-content: center;
     padding: 10px;
 }
-
 
 .header-container2{
     display: flex;
@@ -79,27 +70,22 @@ a:hover{
     align-items: center;
     list-style-position: inside;
     text-align: center;
+    margin: 10px 20px;
 }
 
-.header-container-solutions{
-    border: 1px solid grey;
+.inside-container{
     background-color: whitesmoke;
-    width: 500px;
-    flex:1;
-    border-radius: 10px;
-}
-
-.header-container-markets{
     border: 1px solid grey;
-    background-color: whitesmoke;
-    flex: initial;  
-    width: 500px;
-    flex:1;
     border-radius: 10px;
-    
+    padding: 20px;
+    margin: 5px;
+    width: 400px;
+    flex:1;
+    flex-wrap: wrap;
 }
 
 
+/* SAP: footer */
 .footer{
     color: rgb(255, 255, 255);
     background-color: rgb(24, 24, 24);
@@ -112,64 +98,74 @@ a:hover{
 }
 
 
-
-/* FINANCE part */
-
-.sap{
-    margin: 30px 50px 0 50px;
-}
-
-.header-container-finances{
-    color: rgb(54, 52, 52);
-    background-color: #98d3ec;;
-    margin: 10px 70px 10px 70px;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    border: 1px solid grey;
-    align-items: center;
-}
-.header-container-finances h1{
+/* HISTORY: content */
+.header{
     color: rgb(24, 24, 24);
     display: flex;
     justify-content: center;
-    padding:10px;
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+.header-container3{
+    color: rgb(54, 52, 52);
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    margin: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.history-container{
+    background-color: whitesmoke;
+}
+
+/* FINANCE: content */
+.header-container-finances{
+    background-color: #98d3ec;
 }
 
 .charts{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-
+    justify-content: space-around;
 }
 
 
-
-/* HISTORY PART */
-.formation,
-.enterprise-resource-planning,
-.corporate-restructuring,
-.SAP-AG-era,
-.SAP-SE-era,
-.Focus-on-cloud{
-    color: rgb(54, 52, 52);
-    background-color: #019ce0;;
-    margin: 10px 70px 10px 70px;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    border: 1px solid grey;
-    align-items: center;
-}
-.formation h1,
-.enterprise-resource-planning h1,
-.corporate-restructuring h1,
-.SAP-AG-era h1,
-.SAP-SE-era h1,
-.Focus-on-cloud h1{
-    color: rgb(24, 24, 24);
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+/* TABLET */
+@media only screen and (min-width: 401px) and (max-width: 960px){
+    .menu-container,
+    .links{
+        flex-wrap: wrap;
+    }
+    .header-container2{
+        flex-wrap: wrap;
+    }
 }
 
+/* PHONE */
+@media screen and (max-width: 400px){
+    .menu-container{
+        flex-wrap: wrap;
+    }
+    .links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .history,
+    .finances,
+    .sap{
+        width: 150px;
+        margin: 2px 12px;
+        padding: 20px 10px;
+        border: 2px solid rgb(54, 52, 52);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .header-container2{
+        flex-wrap: wrap;
+    }
+}
